@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.background-image {
+    background-image: url('/FUNDO2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    color: white;
+    padding: 40px;
+    max-width: 600px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.author img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 .red {
+    color: red;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.button-82-pushable {
+position: relative;
+display: inline-block; /* Para que o link se comporte como um bloco */
+overflow: hidden; /* Garante que elementos filhos não transbordem */
+text-decoration: none; /* Remove a decoração de texto padrão */
+cursor: pointer;
+outline-offset: 4px;
+transition: filter 250ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-82-shadow {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 12px;
+background: hsl(0deg 0% 0% / 0.25);
+will-change: transform;
+transform: translateY(2px);
+transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 12px;
+background: linear-gradient(to left, red);
+}
+
+.button-82-front {
+display: block;
+position: relative;
+padding: 12px 27px;
+border-radius: 12px;
+font-size: 1.1rem;
+color: white;
+background: red;
+will-change: transform;
+transform: translateY(-4px);
+transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-pushable:hover .button-82-front {
+transform: translateY(-2px);
+}
+
+.button-82-pushable:active .button-82-front {
+transform: translateY(0);
+}
+
+
+@media (min-width: 768px) {
+.button-82-front {
+font-size: 1.25rem;
+padding: 12px 42px;
+}
+}
+
+.button-82-pushable:hover {
+filter: brightness(110%);
+-webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+transform: translateY(-6px);
+transition:
+transform
+250ms
+cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+transform: translateY(-2px);
+transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+transform: translateY(4px);
+transition:
+transform
+250ms
+cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+transform: translateY(1px);
+transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+outline: none;
+}
+@keyframes glitch {
+0% {
+clip-path: var(--slice-1);
+transform: translate(-20px, -10px);
+}
+10% {
+clip-path: var(--slice-3);
+transform: translate(10px, 10px);
+}
+20% {
+clip-path: var(--slice-1);
+transform: translate(-10px, 10px);
+}
+30% {
+clip-path: var(--slice-3);
+transform: translate(0px, 5px);
+}
+40% {
+clip-path: var(--slice-2);
+transform: translate(-5px, 0px);
+}
+50% {
+clip-path: var(--slice-3);
+transform: translate(5px, 0px);
+}
+60% {
+clip-path: var(--slice-4);
+transform: translate(5px, 10px);
+}
+70% {
+clip-path: var(--slice-2);
+transform: translate(-10px, 10px);
+}
+80% {
+clip-path: var(--slice-5);
+transform: translate(20px, -10px);
+}
+90% {
+clip-path: var(--slice-1);
+transform: translate(-10px, 0px);
+}
+100% {
+clip-path: var(--slice-1);
+transform: translate(0);
+}
+}
+
+@media (min-width: 768px) {
+.button-49,
+.button-49:after {
+width: 200px;
+height: 86px;
+line-height: 88px;
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
